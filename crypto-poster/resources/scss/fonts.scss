@@ -1,0 +1,52 @@
+.heading-mono, .heading-mono-purple-glow {
+    color: $light-purple;
+    font-family: $font-mono;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 1000;
+    font-size: 3cm;
+    line-height: 1;
+}
+
+.heading-mono-purple-glow {
+    text-shadow: 0 0 40px $light-purple-glow;
+}
+
+.heading-sans, .heading-sans-purple-glow {
+    color: $light-purple;
+    font-family: $font-sans;
+    font-weight: 600;
+    font-size: 1.2cm;
+    letter-spacing: 0.02em;
+}
+
+.heading-sans-purple-glow {
+    text-shadow: 0 0 20px $light-purple-glow;
+}
+
+.text-mono {
+    color: $text;
+    font-family: $font-mono;
+    font-weight: 400;
+    font-size: 0.55cm;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+}
+
+.text-sans {
+    color: $text;
+    font-family: $font-sans;
+    font-weight: 400;
+    font-size: 0.6cm;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+}
+
+.purple {
+    color: $light-purple;
+}
+
+.purple-glow {
+    color: $light-purple;
+    text-shadow: 0 0 20px $light-purple-glow;
+}
