@@ -1,0 +1,56 @@
+.list-columns {
+    width: 100%;
+    display: grid;
+    margin-top: 0.6cm;
+    gap: 0.4cm;
+
+    ul {
+        margin: 0;
+        padding-left: 1cm;
+        list-style-type: none;
+        opacity: 0.96;
+        text-align: start;
+
+        li {
+            position: relative;
+            padding-left: 0.4cm;
+            margin-bottom: 0.2cm;
+
+            &.none::before {
+                content: "\2022";
+                position: absolute;
+                margin-left: -30px;
+            }
+
+            &.minus::before {
+                content: "\2014";
+                position: absolute;
+                margin-left: -30px;
+            }
+
+            &.plus::before {
+                content: "\002B";
+                position: absolute;
+                margin-left: -30px;
+                font-weight: 300;
+                scale: 1.6;
+            }
+        }
+    }
+}
+
+.cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.cols-5 {
+    grid-template-columns: repeat(5, 1fr);
+}

@@ -1,7 +1,7 @@
 @props(['title', 'text', 'size' => 'col-6'])
 
 @php
-    $text = str_replace(['==', '[/]'], ['<span class="purple">', '</span>'], $text);
+    $text = str_replace(['==', '[/]'], ['<span class="light-purple">', '</span>'], $text);
 @endphp
 
 <div class="section-card {{ $size }}">

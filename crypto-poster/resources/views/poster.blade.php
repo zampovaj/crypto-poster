@@ -1,3 +1,22 @@
+@php
+    $asymVsSymText =
+        '==Symetrická[/] kryptografie používá ==stejný klíč[/] pro šifrování i dešifrování, zatímco ==asymetrická[/] kryptografie využívá pár klíčů - ==veřejný[/] a ==soukromý[/]. Symetrická je ==rychlejší[/], ale vyžaduje předem sdílený klíč, zatímco asymetrická umožňuje ==bezpečnou komunikaci[/], ale je ==pomalejší[/].';
+    $asymVsSymCols = [
+        [
+            ['text' => 'jeden =a=sdílený klíč[/] pro obě operace', 'sign' => 'none'],
+            ['text' => 'velmi rychlá (např. AES)', 'sign' => 'plus'],
+            ['text' => 'používá se pro samotná data', 'sign' => 'plus'],
+            ['text' => 'nutnost klíč předem bezpečně předat', 'sign' => 'minus'],
+        ],
+        [
+            ['text' => '=p=dvojice klíčů[/] (veřejný / soukromý)', 'sign' => 'none'],
+            ['text' => 'výrazně pomalejší (RSA, ECC)', 'sign' => 'minus'],
+            ['text' => 'umožňuje bezpečnou výměnu klíče', 'sign' => 'plus'],
+            ['text' => 'používá se jen na začátku komunikace', 'sign' => 'none'],
+        ],
+    ];
+@endphp
+
 <x-layouts.app>
     <div>
         <div class="poster--header">
@@ -11,10 +30,16 @@
         </div>
 
         <div class="poster--content">
-            <x-section-card title="Základní principy"
-                text="Kryptografie je věda o zabezpečení informací pomocí matematických algoritmů. Její hlavními cíli jsou důvěrnost, integrita, autentizace a nepopiratelnost."
-                size="col-3">
+
+            <x-section-card title="Symetrická vs asymetrická" :text="$asymVsSymText" size="col-12">
+
+                <x-diagrams.sym-vs-asym />
+
+                <x-list-columns :columnsText="$asymVsSymCols" />
+
             </x-section-card>
+
+
 
         </div>
     </div>
