@@ -1,18 +1,14 @@
 @props(['title', 'text', 'size' => 'col-6'])
 
-@php
-    $text = str_replace(['==', '[/]'], ['<span class="light-purple">', '</span>'], $text);
-@endphp
-
 <div class="section-card {{ $size }}">
-    <div class="heading-sans-purple-glow">
+    <div class="section-card__title heading-sans--purple-glow">
         {{ $title }}
     </div>
     
-    <div class="separator"></div>
+    <div class="section-card__separator"></div>
 
     <div class="text-mono">
-        {!! $text !!}
+        <x-text-transformer :text="$text" />
     </div>
 
     <div class="content">

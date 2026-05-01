@@ -1,18 +1,35 @@
-.heading-mono, .heading-mono-purple-glow {
+.heading-mono,
+.heading-mono--purple-glow {
     color: $light-purple;
-    font-family: $font-mono;
+    font-family: $font-pixel;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-weight: 1000;
-    font-size: 3cm;
+    letter-spacing: -0.1em;
+    font-weight: 400;
+    font-size: 4cm;
     line-height: 1;
+
+    // color: $light-purple;
+    // font-family: $font-mono;
+    // text-transform: uppercase;
+    // letter-spacing: 0.12em;
+    // font-weight: 1000;
+    // font-size: 3cm;
+    // line-height: 1;
+
+    font-family: $font-pixel-p2p;
+    letter-spacing: 0.04em;
+    font-weight: 400;
+    font-size: 2.5cm;
+    line-height: 1.4;
+    transform: scaleY(1.4);
 }
 
-.heading-mono-purple-glow {
+.heading-mono--purple-glow {
     text-shadow: 0 0 40px $light-purple-glow;
 }
 
-.heading-sans, .heading-sans-purple-glow {
+.heading-sans,
+.heading-sans--purple-glow {
     color: $light-purple;
     font-family: $font-sans;
     font-weight: 600;
@@ -20,7 +37,7 @@
     letter-spacing: 0.02em;
 }
 
-.heading-sans-purple-glow {
+.heading-sans--purple-glow {
     text-shadow: 0 0 20px $light-purple-glow;
 }
 
@@ -42,7 +59,8 @@
     letter-spacing: 0.01em;
 }
 
-.purple, .purple-glow {
+.purple,
+.purple-glow {
     color: $light-purple;
 }
 
@@ -54,7 +72,8 @@
     text-shadow: 0 0 20px $light-purple-glow;
 }
 
-.accent, .accent-glow {
+.accent,
+.accent-glow {
     color: $accent;
 }
 
@@ -62,19 +81,22 @@
     text-shadow: 0 0 20px $accent-glow;
 }
 
-.subheading-sans, .subheading-sans-accent, .subheading-sans-accent-glow {
+.subheading-sans,
+.subheading-sans--accent,
+.subheading-sans--accent-glow {
     text-transform: uppercase;
     color: $text;
     font-family: $font-sans;
     font-weight: 600;
-    font-size: 0.5cm;
+    font-size: 0.55cm;
     letter-spacing: -0.02em;
 }
 
-.subheading-sans-accent, .subheading-sans-accent-glow {
+.subheading-sans--accent,
+.subheading-sans--accent-glow {
     color: $accent;
 }
 
-.subheading-sans-accent-glow {
+.subheading-sans--accent-glow {
     text-shadow: 0 0 20px $accent-glow;
 }

@@ -5,7 +5,11 @@
   border-radius: 0.3cm;
 }
 
-.separator {
+.section-card__title {
+  // text-align: center;
+}
+
+.section-card__separator {
   height: 1px;
   background: $dark-purple;
   margin: 0.4cm 0;
@@ -22,6 +26,9 @@
 }
 .col-8 {
   grid-column: span 8;
+}
+.col-10 {
+  grid-column: span 10;
 }
 .col-12 {
   grid-column: span 12;

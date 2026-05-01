@@ -23,27 +23,29 @@ body {
     position: relative;
 }
 
-.poster--header {
+.poster__header {
     display: flex;
     flex-direction: column;
     align-items: center;
 
     padding: 0;
+    padding-top: 1cm;
+    padding-bottom: 0.2cm;
 }
 
-.poster--header__title {
+.poster__title {
     display: flex;
     margin-bottom: 0.2cm;
 }
 
-.poster--header__subtitle {
+.poster__subtitle {
     display: flex;
     font-size: 0.8cm !important;
     color: $light-purple !important;
     opacity: 0.8;
 }
 
-.poster--content {
+.poster__content {
     display: grid;
     grid-template-columns: repeat(24, 1fr);
     grid-auto-rows: auto;
