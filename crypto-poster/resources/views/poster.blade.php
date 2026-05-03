@@ -17,14 +17,34 @@
     ];
 
     $signaturesText =
-        'Kryptografie se nevyužívá jen pro šifrování. Často je potřeba prokázat =p=identitu odesílatele[/] nebo =p=neporušenost zprávy[/]. K tomu slouží =p=digitální podpisy[/] založené na asymetrické kryptografii. Odesílatel vytvoří otisk dat (=p=hash[/]), který zašifruje svým =p=soukromým klíčem[/]. Příjemce pak tento podpis dešifruje =p=veřejným klíčem[/] odesílatele a výsledek porovná s vlastním hashem dat. Pokud se shodují, data nikdo nezměnil a skutečně pochází od daného odesílatele.';
+        'Kryptografie se nepoužívá jen pro šifrování, ale i pro =p=ověření identity[/] a =p=neporušenosti dat[/].
+        K tomu slouží =p=digitální podpisy[/] založené na asymetrické kryptografii.
+        Odesílatel vytvoří otisk dat (=p=hash[/]) a podepíše ho svým =p=soukromým klíčem[/].
+        Příjemce podpis ověří pomocí =p=veřejného klíče[/] a porovná ho s vlastním hashem.
+        Shoda znamená, že data nebyla změněna a skutečně pochází od odesílatele.';
     $httpsText =
-        'Na tomto principu stojí =a=bezpečné připojení k internetu[/]. Protokol =a=HTTPS[/], který se dnes využívá pro téměř veškerou internetovou komunikaci, funguje díky protokolu =a=SSL/TLS[/]. Každý server musí mít =a=digitálně podepsaný certifikát[/] ověřený příslušnou autoritou, kterým prokazuje svoji identitu. Po ověření identity serveru (tzv. =a=handshake[/]) vytvoří klient se serverem =a=sdílený klíč[/], kterým =a=šifrují všechna přenášená data[/].';
+        'Stejný princip se používá i při =a=HTTPS[/]:
+        server se prokazuje =a=podepsaným certifikátem[/] a klient si ověřuje jeho pravost,
+        než naváže důvěrné spojení.';
+
+    $rsaText = 'Nejznámější asymetrický algoritmus.
+        Stejně jako ostatní staví na tom, že je =p=snadné[/] matematickou operaci =p=provést[/],
+        ale téměř =p=nemožné[/] ji =p=zvrátit[/].
+        U RSA je to násobení velkých prvočísel vs. jejich zpětný rozklad (=p=faktorizace=p=).';
+    
+        $rsaSteps = [
+            'Zvolí se dvě tajná velká =glue=prvočísla \(p\) a \(q\)[/]',
+            'Spočítá se veřejný modul \(n = p \cdot q\)',
+            'Určí se řád grupy \(\lambda(n) = \text{lcm}(p-1, q-1)\)',
+            'Zvolí se veřejný exponent \(e\) a vypočítá soukromý =glue=klíč \(d\):\(d \equiv e^{-1} \pmod{\lambda(n)}\)[/]',
+            'Šifrování: Zpráva \(M\) se šifruje veřejným =glue=klíčem \((n, e)\): \(C = M^e \pmod n\)[/]',
+            'Dešifrování: Šifra \(C\) se dešifruje soukromým klíčem \(d\): \(M = C^d \pmod n\)',
+        ]
 
 @endphp
 
 <x-layouts.app>
-    <div>
+    <div class>
         <div class="poster__header">
             <div class="poster__title heading-mono--purple-glow">
                 Jak funguje kryptografie?
@@ -37,6 +57,8 @@
 
         <div class="poster__content">
 
+            {{-- asymmetric vs Symmetric --}}
+
             <x-section-card title="Symetrická vs asymetrická kryptografie" :text="$asymVsSymText" size="col-10">
 
                 <x-diagrams.sym-vs-asym />
@@ -44,13 +66,41 @@
 
             </x-section-card>
 
+            {{-- signatures, https --}}
+
             <x-section-card title="Digitální podpisy a HTTPS" :text="$signaturesText" size="col-8">
+
+                <div class="text-mono" style="padding-top: 0.2cm;">
+                    <x-text-transformer :text="$httpsText" />
+                </div>
 
                 <x-diagrams.https />
 
-                <div class="text-mono">
-                    <x-text-transformer :text="$httpsText" />
-                </div>
+            </x-section-card>
+
+            {{-- rsa --}}
+
+            <x-section-card title="RSA" :text="$rsaText" size="col-6">
+
+                <x-list-steps :rows="$rsaSteps" />
+
+            </x-section-card>
+
+            {{-- ecc --}}
+
+            <x-section-card title="Eliptické křivky" :text="$signaturesText" size="col-8">
+
+                <x-list-steps :rows="['hi', 'hey', 'hi', 'hey']" />
+            </x-section-card>
+
+            {{-- ecc --}}
+
+            <x-section-card title="DiffieHellman" :text="$signaturesText" size="col-8">
+            </x-section-card>
+
+            {{-- pqc --}}
+
+            <x-section-card title="Post-kvantová kryptografie" :text="$signaturesText" size="col-8">
             </x-section-card>
 
         </div>

@@ -1,7 +1,11 @@
 @props(['text'])
 
 @php
-    $text = str_replace(['=p=', '=a=', '[/]'], ['<span class="light-purple">', '<span class="accent">','</span>'], $text);
+    $text = htmlspecialchars_decode($text);
+    $text = str_replace(
+        ['=p=', '=a=', '=glue=', '[/]'],
+        ['<span class="light-purple">', '<span class="accent">', '<span style="white-space: nowrap;">', '</span>'],
+        $text);
 @endphp
 
 <div>

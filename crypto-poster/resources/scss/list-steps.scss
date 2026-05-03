@@ -1,0 +1,27 @@
+.list-steps {
+    padding: 0 0.1cm;
+    padding-top: 0.8cm;
+
+    ul {
+        list-style: decimal;
+        padding-left: 0.8cm;
+
+        li {
+            margin-bottom: 0.4cm;
+            padding-left: 0.2cm;
+            line-height: 1.6;
+
+            mjx-container {
+                font-size: 0.8cm !important;
+                padding: 0.14cm;
+                color: $light-purple;
+                font-size: 1.1em;
+            }
+
+            &::marker {
+                color: $light-purple;
+                text-shadow: 0 0 20px $light-purple-glow;
+            }
+        }
+    }
+}
