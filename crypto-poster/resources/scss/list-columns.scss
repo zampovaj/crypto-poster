@@ -68,18 +68,8 @@
     }
 }
 
-.cols-2 {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.cols-3 {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.cols-4 {
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.cols-5 {
-    grid-template-columns: repeat(5, 1fr);
+@each $size in 2, 3, 4, 5 {
+  .cols-#{$size} {
+    grid-template-columns: repeat(#{$size}, 1fr);
+  }
 }

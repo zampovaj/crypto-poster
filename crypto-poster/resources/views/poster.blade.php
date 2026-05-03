@@ -27,19 +27,23 @@
         server se prokazuje =a=podepsaným certifikátem[/] a klient si ověřuje jeho pravost,
         než naváže důvěrné spojení.';
 
-    $rsaText = 'Nejznámější asymetrický algoritmus.
-        Stejně jako ostatní staví na tom, že je =p=snadné[/] matematickou operaci =p=provést[/],
+    $rsaText = '=p=Nejznámější asymetrický algoritmus.[/]
+        =glue=Stejně jako[/] ostatní staví na tom, že je =p=snadné[/] matematickou operaci =p=provést[/],
         ale téměř =p=nemožné[/] ji =p=zvrátit[/].
         U RSA je to násobení velkých prvočísel vs. jejich zpětný rozklad (=p=faktorizace=p=).';
     
-        $rsaSteps = [
-            'Zvolí se dvě tajná velká =glue=prvočísla \(p\) a \(q\)[/]',
-            'Spočítá se veřejný modul \(n = p \cdot q\)',
-            'Určí se řád grupy \(\lambda(n) = \text{lcm}(p-1, q-1)\)',
-            'Zvolí se veřejný exponent \(e\) a vypočítá soukromý =glue=klíč \(d\):\(d \equiv e^{-1} \pmod{\lambda(n)}\)[/]',
-            'Šifrování: Zpráva \(M\) se šifruje veřejným =glue=klíčem \((n, e)\): \(C = M^e \pmod n\)[/]',
-            'Dešifrování: Šifra \(C\) se dešifruje soukromým klíčem \(d\): \(M = C^d \pmod n\)',
-        ]
+    $rsaSteps = [
+        'Zvolí se dvě tajná velká =glue=prvočísla \(p\) a \(q\)[/]',
+        'Spočítá se veřejný modul \(n = p \cdot q\)',
+        'Určí se řád grupy \(\lambda(n) = \text{lcm}(p-1, q-1)\)',
+        'Zvolí se veřejný exponent \(e\) a vypočítá soukromý =glue=klíč \(d\):\(d \equiv e^{-1} \pmod{\lambda(n)}\)[/]',
+        'Šifrování: Zpráva \(M\) se šifruje veřejným =glue=klíčem \((n, e)\): \(C = M^e \pmod n\)[/]',
+        'Dešifrování: Šifra \(C\) se dešifruje soukromým klíčem \(d\): \(M = C^d \pmod n\)',
+    ];
+
+    $pqcText = 'Současné algoritmy jsou bezpečné proti klasickým počítačům,
+        ale =p=kvantové počítače[/] by mohly především ty asymetrické (RSA, ECC) prolomit.
+        =p=Post-kvantová kryptografie[/] hledá nové algoritmy, které zůstanou =p=bezpečné v budoucnosti[/].';
 
 @endphp
 
@@ -59,7 +63,7 @@
 
             {{-- asymmetric vs Symmetric --}}
 
-            <x-section-card title="Symetrická vs asymetrická kryptografie" :text="$asymVsSymText" size="col-10">
+            <x-section-card title="Symetrická vs asymetrická" :text="$asymVsSymText" size="col-8">
 
                 <x-diagrams.sym-vs-asym />
                 <x-list-columns :columnsText="$asymVsSymCols" />
@@ -68,12 +72,12 @@
 
             {{-- signatures, https --}}
 
-            <x-section-card title="Digitální podpisy a HTTPS" :text="$signaturesText" size="col-8">
+            <x-section-card title="Digitální podpisy a HTTPS" :text="$signaturesText" size="col-10">
 
-                <div class="text-mono" style="padding-top: 0.2cm;">
+                <div class="text-mono poster__https-intro">
                     <x-text-transformer :text="$httpsText" />
                 </div>
-
+                
                 <x-diagrams.https />
 
             </x-section-card>
@@ -86,21 +90,25 @@
 
             </x-section-card>
 
-            {{-- ecc --}}
+            {{-- dhke --}}
 
-            <x-section-card title="Eliptické křivky" :text="$signaturesText" size="col-8">
-
-                <x-list-steps :rows="['hi', 'hey', 'hi', 'hey']" />
-            </x-section-card>
-
-            {{-- ecc --}}
-
-            <x-section-card title="DiffieHellman" :text="$signaturesText" size="col-8">
+            <x-section-card title="DiffieHellman" text="" size="col-8">
+            
+                <x-diagrams.diffie-hellman />
+                
             </x-section-card>
 
             {{-- pqc --}}
 
-            <x-section-card title="Post-kvantová kryptografie" :text="$signaturesText" size="col-8">
+            <x-section-card title="Post-kvantová kryptografie" :text="$pqcText" size="col-6">
+            </x-section-card>
+
+            {{-- ecc --}}
+
+            <x-section-card title="Eliptické křivky" :text="$signaturesText" size="col-10">
+
+                <x-list-columns :columnsText="$asymVsSymCols" />
+                
             </x-section-card>
 
         </div>

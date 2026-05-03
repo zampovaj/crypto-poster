@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 0 1060 650" fill="none" {{ $attributes->merge(['class' => 'w-full h-auto']) }}>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 10 1200 600" fill="none" {{ $attributes->merge(['class' => 'w-full h-auto']) }}>
     <!-- DEFINITIONS -->
     <defs>
         <!-- Standard Purple Arrowhead -->
@@ -48,8 +48,8 @@
         </g>
 
         <!-- Content -->
-        <text x="125" y="100" fill="#7dd3fc" font-family="'IBM Plex Mono', monospace" font-size="16" text-anchor="middle" font-weight="600">1. CLIENT HELLO</text>
-        <text x="125" y="125" fill="#f2d8f8" opacity="0.8" font-family="'IBM Plex Sans', sans-serif" font-size="13" text-anchor="middle">
+        <text x="125" y="100" fill="#7dd3fc" font-family="'IBM Plex Mono', monospace" font-size="17" text-anchor="middle" font-weight="600">1. CLIENT HELLO</text>
+        <text x="125" y="125" fill="#f2d8f8" opacity="0.8" font-family="'IBM Plex Sans', sans-serif" font-size="14" text-anchor="middle">
             <tspan x="125" dy="0">Prohlížeč zahajuje spojení.</tspan>
             <tspan x="125" dy="18">Odesílá podporované verze TLS,</tspan>
             <tspan x="125" dy="18">šifrovací sady a náhodná</tspan>
@@ -77,8 +77,8 @@
         </g>
 
         <!-- Content -->
-        <text x="125" y="100" fill="#e879f9" font-family="'IBM Plex Mono', monospace" font-size="16" text-anchor="middle" font-weight="600">2. ODPOVĚĎ SERVERU</text>
-        <text x="125" y="125" fill="#f2d8f8" opacity="0.8" font-family="'IBM Plex Sans', sans-serif" font-size="13" text-anchor="middle">
+        <text x="125" y="100" fill="#e879f9" font-family="'IBM Plex Mono', monospace" font-size="17" text-anchor="middle" font-weight="600">2. ODPOVĚĎ SERVERU</text>
+        <text x="125" y="125" fill="#f2d8f8" opacity="0.8" font-family="'IBM Plex Sans', sans-serif" font-size="14" text-anchor="middle">
             <tspan x="125" dy="0">Server vybere šifrovací sadu</tspan>
             <tspan x="125" dy="18">a odešle svůj certifikát.</tspan>
             <tspan x="125" dy="18">Ten obsahuje veřejný klíč</tspan>
@@ -106,8 +106,8 @@
         </g>
 
         <!-- Content -->
-        <text x="125" y="100" fill="#fde047" font-family="'IBM Plex Mono', monospace" font-size="16" text-anchor="middle" font-weight="600">3. OVĚŘENÍ IDENTITY</text>
-        <text x="125" y="125" fill="#f2d8f8" opacity="0.8" font-family="'IBM Plex Sans', sans-serif" font-size="13" text-anchor="middle">
+        <text x="125" y="100" fill="#fde047" font-family="'IBM Plex Mono', monospace" font-size="17" text-anchor="middle" font-weight="600">3. OVĚŘENÍ IDENTITY</text>
+        <text x="125" y="125" fill="#f2d8f8" opacity="0.8" font-family="'IBM Plex Sans', sans-serif" font-size="14" text-anchor="middle">
             <tspan x="125" dy="0">Prohlížeč ověřuje certifikát vůči</tspan>
             <tspan x="125" dy="18">důvěryhodné autoritě (CA).</tspan>
             <tspan x="125" dy="18">Tím se brání útokům typu</tspan>
@@ -148,8 +148,8 @@
         </g>
 
         <!-- Content -->
-        <text x="125" y="100" fill="#ea8cf8" font-family="'IBM Plex Mono', monospace" font-size="16" text-anchor="middle" font-weight="600">4. VÝMĚNA KLÍČŮ</text>
-        <text x="125" y="125" fill="#f2d8f8" opacity="0.8" font-family="'IBM Plex Sans', sans-serif" font-size="13" text-anchor="middle">
+        <text x="125" y="100" fill="#ea8cf8" font-family="'IBM Plex Mono', monospace" font-size="17" text-anchor="middle" font-weight="600">4. VÝMĚNA KLÍČŮ</text>
+        <text x="125" y="125" fill="#f2d8f8" opacity="0.8" font-family="'IBM Plex Sans', sans-serif" font-size="14" text-anchor="middle">
             <tspan x="125" dy="0">Pomocí asymetrické kryptografie</tspan>
             <tspan x="125" dy="18">(např. Diffie-Hellman) se</tspan>
             <tspan x="125" dy="18">obě strany bezpečně dohodnou</tspan>
@@ -177,8 +177,8 @@
         </g>
 
         <!-- Content -->
-        <text x="125" y="100" fill="#2ef8a0" font-family="'IBM Plex Mono', monospace" font-size="16" text-anchor="middle" font-weight="600">5. ZABEZPEČENÝ TUNEL</text>
-        <text x="125" y="125" fill="#f2d8f8" opacity="0.8" font-family="'IBM Plex Sans', sans-serif" font-size="13" text-anchor="middle">
+        <text x="125" y="100" fill="#2ef8a0" font-family="'IBM Plex Mono', monospace" font-size="17" text-anchor="middle" font-weight="600">5. ZABEZPEČENÝ TUNEL</text>
+        <text x="125" y="125" fill="#f2d8f8" opacity="0.8" font-family="'IBM Plex Sans', sans-serif" font-size="14" text-anchor="middle">
             <tspan x="125" dy="0">Asymetrická fáze končí.</tspan>
             <tspan x="125" dy="18">Data jsou nyní šifrována</tspan>
             <tspan x="125" dy="18">rychlou symetrickou šifrou</tspan>
