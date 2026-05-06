@@ -52,7 +52,41 @@ body {
     padding: 1cm;
 }
 
-.poster__https-intro {
+// https card
+
+.https-card__intro {
     padding-top: 0.4cm;
     padding-bottom: 0.2cm;
+}
+
+// diffie-hellman card
+
+.dhke-card__content {
+    display: flex;
+    gap: 16px;
+}
+
+.dhke-card__diagram {
+    display: flex;
+    flex: 5;
+}
+
+.dhke-card__text {
+    display: flex;
+    flex: 1;
+    padding-top: 0.4cm;
+}
+
+// pqc card
+
+.pqc-card__diagram {
+    padding-top: 0.4cm;
+    transform: scale(1.1);
+}
+
+// ecc card
+
+.ecc-card__geometry-diagram {
+    max-width: 650px;
+    margin: auto;
 }

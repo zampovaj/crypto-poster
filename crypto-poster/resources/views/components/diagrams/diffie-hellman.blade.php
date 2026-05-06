@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 30 1000 580" fill="none" {{ $attributes->merge(['class' => 'w-full h-auto']) }}>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="25 30 950 580" fill="none" {{ $attributes->merge(['class' => 'w-full h-auto']) }}>
     <defs>
         <!-- Gradients for "Mixed Parameters" -->
         <linearGradient id="mix-alice" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -106,13 +106,13 @@
     </g>
     <text x="170" y="185" fill="#7dd3fc" font-family="'IBM Plex Sans', sans-serif" font-size="14" text-anchor="middle" font-weight="600">Tajný klíč Alice</text>
     <text x="228" y="185" fill="#7dd3fc" font-family="'IBM Plex Mono', monospace" font-size="15" font-weight="500" text-anchor="middle">a</text>
-
+ 
     <!-- Bob's Secret -->
     <g transform="translate(820, 150)">
         <use href="#icon-private-key" fill="#ea8cf8" />
     </g>
-    <text x="830" y="185" fill="#ea8cf8" font-family="'IBM Plex Sans', sans-serif" font-size="14" text-anchor="middle" font-weight="600">Tajný klíč Boba</text>
-    <text x="772" y="185" fill="#ea8cf8" font-family="'IBM Plex Mono', monospace" font-size="15" font-weight="500" text-anchor="middle">b</text>
+    <text x="815" y="185" fill="#ea8cf8" font-family="'IBM Plex Sans', sans-serif" font-size="14" text-anchor="middle" font-weight="600">Tajný klíč Boba</text>
+    <text x="875" y="185" fill="#ea8cf8" font-family="'IBM Plex Mono', monospace" font-size="15" font-weight="500" text-anchor="middle">b</text>
 
 
     <!-- ==========================================

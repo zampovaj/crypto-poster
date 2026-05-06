@@ -41,9 +41,15 @@
         'Dešifrování: Šifra \(C\) se dešifruje soukromým klíčem \(d\): \(M = C^d \pmod n\)',
     ];
 
-    $pqcText = 'Současné algoritmy jsou bezpečné proti klasickým počítačům,
-        ale =p=kvantové počítače[/] by mohly především ty asymetrické (RSA, ECC) prolomit.
-        =p=Post-kvantová kryptografie[/] hledá nové algoritmy, které zůstanou =p=bezpečné v budoucnosti[/].';
+    $dhkeText = 'Dvě strany si dokážou vytvořit =p=stejné tajemství[/], aniž by si ho kdy poslaly.
+        Toto umožňuje protokol =p=Diffie&#8209;Hellman[/] založený na =p=asymetrické kryptografii[/].';
+
+    $pqcText = 'Dnešní šifry stačí na běžné počítače,
+        ale dostatečně výkonné =p=kvantové počítače[/] je =p=prolomí[/] nebo kriticky oslabí.
+        =p=Post=-=kvantová kryptografie[/] proto hledá algoritmy, které zůstanou =p=bezpečné v budoucnosti[/].';
+
+    $eccText='ECC využívá matematiku =p=eliptických křivek[/] nad konečnými tělesy.
+        Dosahuje tak stejné bezpečnosti jako klasické asymetrické algortimy, ale s použitím =p=menších klíčů[/].'
 
 @endphp
 
@@ -51,7 +57,7 @@
     <div class>
         <div class="poster__header">
             <div class="poster__title heading-mono--purple-glow">
-                Jak funguje kryptografie?
+                Jak funguje kryp<span style="margin-left: -0.4cm;">t</span>ogra<span style="margin-left: 0.2cm;">f</span><span style="margin-left: -0.4cm;">i</span>e?
             </div>
 
             <div class="poster__subtitle text-mono">
@@ -74,7 +80,7 @@
 
             <x-section-card title="Digitální podpisy a HTTPS" :text="$signaturesText" size="col-10">
 
-                <div class="text-mono poster__https-intro">
+                <div class="text-mono https-card__intro">
                     <x-text-transformer :text="$httpsText" />
                 </div>
                 
@@ -92,22 +98,40 @@
 
             {{-- dhke --}}
 
-            <x-section-card title="DiffieHellman" text="" size="col-8">
+            <x-section-card title="Diffie-Hellmanova výměna klíče" text="" size="col-10">
             
-                <x-diagrams.diffie-hellman />
+                <div class="dhke-card__content">
+                    <div class="dhke-card__diagram">
+                        <x-diagrams.diffie-hellman />
+                    </div>
+
+                    <div class="dhke-card__text text-mono">
+                        <x-text-transformer :text="$dhkeText" />
+                    </div>
+                </div>
                 
             </x-section-card>
 
             {{-- pqc --}}
 
-            <x-section-card title="Post-kvantová kryptografie" :text="$pqcText" size="col-6">
+            <x-section-card title="PQC" :text="$pqcText" size="col-6">
+
+                <div class="pqc-card__diagram">
+                    <x-diagrams.quantum />
+                </div>
+
             </x-section-card>
 
             {{-- ecc --}}
 
-            <x-section-card title="Eliptické křivky" :text="$signaturesText" size="col-10">
+            <x-section-card title="Eliptické křivky" :text="$eccText" size="col-8">
 
-                <x-list-columns :columnsText="$asymVsSymCols" />
+                <div>
+                    <div class="ecc-card__geometry-diagram">
+                        <x-diagrams.curve-geometry />
+                    </div>
+                    {{-- <x-diagrams.curve-comparison /> --}}
+                </div>
                 
             </x-section-card>
 
