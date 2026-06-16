@@ -67,7 +67,7 @@ body {
 
 .dhke-card__diagram {
     display: flex;
-    flex: 5;
+    flex: 4;
 }
 
 .dhke-card__text {
@@ -93,7 +93,7 @@ body {
 
 .ecc-card__diagram {
     display: flex;
-    flex: 5;
+    flex: 4;
     max-width: 650px;
     margin: auto;
 }
@@ -104,7 +104,7 @@ body {
     padding-top: 0.4cm;
 }
 
-// hash, blockchain, zkp cards
+// hash, blockchain cards
 
 .hash-card__diagram {
     margin-top: 0.4cm;
@@ -115,7 +115,8 @@ body {
 }
 
 .zkp-card__diagram {
-    margin-top: 0.5cm;
+    margin-top: 0.4cm;
+    margin-bottom: 0.4cm;
 }
 
 // poster title kerning

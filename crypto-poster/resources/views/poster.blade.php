@@ -16,14 +16,12 @@
         ],
     ];
 
-    $signaturesText =
-        'Kryptografie se nepoužívá jen pro šifrování, ale i pro =p=ověření identity[/] a =p=neporušenosti dat[/].
+    $signaturesText = 'Kryptografie se nepoužívá jen pro šifrování, ale i pro =p=ověření identity[/] a =p=neporušenosti dat[/].
         K tomu slouží =p=digitální podpisy[/] založené na asymetrické kryptografii.
         Odesílatel vytvoří otisk dat (=p=hash[/]) a podepíše ho svým =p=soukromým klíčem[/].
         Příjemce podpis ověří pomocí =p=veřejného klíče[/] a porovná ho s vlastním hashem.
         Shoda znamená, že data nebyla změněna a skutečně pochází od odesílatele.';
-    $httpsText =
-        'Stejný princip se používá i při =a=HTTPS[/]:
+    $httpsText = 'Stejný princip se používá i při =a=HTTPS[/]:
         server se prokazuje =a=podepsaným certifikátem[/] a klient si ověřuje jeho pravost,
         než naváže důvěrné spojení.';
 
@@ -31,7 +29,7 @@
         =glue=Stejně jako[/] ostatní staví na tom, že je =p=snadné[/] matematickou operaci =p=provést[/],
         ale téměř =p=nemožné[/] ji =p=zvrátit[/].
         U RSA je to násobení velkých prvočísel vs. jejich zpětný rozklad (=p=faktorizace=p=).';
-    
+
     $rsaSteps = [
         'Zvolí se dvě tajná velká =glue=prvočísla \(p\) a \(q\)[/]',
         'Spočítá se veřejný modul \(n = p \cdot q\)',
@@ -41,22 +39,42 @@
         'Dešifrování: Šifra \(C\) se dešifruje soukromým klíčem \(d\): \(M = C^d \pmod n\)',
     ];
 
-    $dhkeText = 'Dvě strany si dokážou vytvořit =p=stejné tajemství[/], aniž by si ho kdy poslaly.
-        Toto umožňuje protokol =p=Diffie&#8209;Hellman[/] založený na =p=asymetrické kryptografii[/].';
+    $dhkeText =
+        'Díky =p=asymetrické kryptografii[/] jsou dvě strany schopny vytvořit =p=sdílené tajemství[/], aniž by si ho kdy poslaly. Nejvyužívanější metodou je<br>=p=Diffie-Hellmanův algoritmus[/] využívaný k&nbsp;vytvoření =p=symetrického šifrovacího klíče[/]. Po síti putují pouze veřejná data, z nichž je pro útočníka odposlouchávajícího komunikaci matematicky nemožné klíč vypočítat.';
 
     $hashText = 'Hashovací funkce je matematický algoritmus, který převede libovolná data na unikátní řetězec fixní délky. Pro moderní kryptografii jsou klíčové tyto vlastnosti:
         =glue=• =p=Jednosměrnost[/]: Z hashe nelze získat původní data.[/]
         =glue=• =p=Kolizní odolnost[/]: Je nemožné najít dva různé vstupy se stejným hashem.[/]
         =glue=• =p=Lavinový efekt[/]: I změna jednoho bitu na vstupu kompletně změní celý výstup.[/]';
 
-    $blockchainText = 'Chtěli byste banku, kterou nikdo nevlastní a jejíž historii nikdo nemůže zfalšovat? To je =p=Blockchain[/]. Každý blok v řetězci obsahuje data a =p=hash předchozího bloku[/]. Pokud by útočník změnil data v jednom bloku, změní se i jeho hash, což okamžitě =p=zneplatní všechny následující bloky[/]. Tato technologie stojí za kryptoměnami jako =p=Bitcoin[/] nebo =p=Ethereum[/] a využívá =p=Proof of Work[/] k dosažení decentralizované shody.';
+    $blockchainText =
+        '=p=Blockchain[/] je decentralizovaná databáze, jejíž historii =p=nelze zpětně zfalšovat[/]. Každý blok v řetězci obsahuje transakční data a =p=hash předchozího bloku[/]. Pokud by útočník změnil data v jediném bloku, změní se i jeho hash, což okamžitě =p=zneplatní všechny následující bloky[/]. Tato technologie tvoří absolutní základ kryptoměn jako =p=Bitcoin[/] nebo =p=Ethereum[/] a k dosažení bezpečné shody bez centrální autority využívá algoritmy typu =p=Proof of Work[/].';
 
-    $zkpText = 'Představte si, že můžete někomu dokázat, že znáte tajné heslo, =p=aniž byste mu ho prozradili[/]. To umožňují =p=Zero-Knowledge Proofs[/] (Důkazy s nulovou znalostí). Pomocí složité matematiky prokazatel přesvědčí ověřovatele o pravdivosti tvrzení, aniž by sdílel jakákoliv citlivá data. Tato technologie je klíčem k =p=absolutnímu soukromí[/] v digitální identitě a na blockchainu.';
+    $zkpText =
+        'Matematický koncept =p=Zero-Knowledge Proofs[/] (ZKP - Důkazy s nulovou znalostí) umožňuje prokazateli přesvědčit ověřovatele o pravdivosti tvrzení bez odhalení jakékoli dodatečné informace – např. znalosti hesla, =p=aniž byste mu ho prozradili[/]. Původně interaktivní protokoly byly nahrazeny neinteraktivními (NIZK) verzemi, kdy prokazatel generuje a odesílá jeden matematický důkaz. Technologie je dnes naprosto klíčová pro =p=absolutní soukromí[/] a pro =p=škálování blockchainových sítí[/] (tzv. ZK-Rollups) komprimací tisíců transakcí do jediného důkazu. V praxi se používají dvě hlavní kategorie:';
 
-    $pqcText = 'Dnešní šifry stačí na běžné počítače, ale dostatečně výkonné =p=kvantové počítače[/] je díky Shorově a Groverově algoritmu prokazatelně prolomí. =p=Post-kvantová kryptografie[/] (PQC) proto vyvíjí nové standardy jako =p=ML-KEM (Kyber)[/], které staví na problémech (např. mřížky), jež jsou odolné i vůči kvantovému útoku.';
+    $zkpCols = [
+        [
+            ['text' => '=p=zk-SNARK[/] (Succinct Non-interactive)', 'sign' => 'none-purple'],
+            ['text' => 'velmi =p=malé[/] důkazy, rychlé ověření', 'sign' => 'plus'],
+            ['text' => 'vyžaduje =p=důvěryhodné nastavení[/]', 'sign' => 'minus'],
+            ['text' => 'není odolný proti =p=kvantovým počítačům[/]', 'sign' => 'minus'],
+            ['text' => 'bezpečnost spoléhá na =p=eliptické křivky[/]', 'sign' => 'none-purple'],
+        ],
+        [
+            ['text' => '=a=zk-STARK[/] (Scalable Transparent)', 'sign' => 'none-accent'],
+            ['text' => '=a=nevyžaduje[/] důvěryhodné nastavení', 'sign' => 'plus'],
+            ['text' => 'odolný proti =a=kvantovým počítačům[/]', 'sign' => 'plus'],
+            ['text' => 'důkazy jsou =a=větší[/] a výpočetně náročnější', 'sign' => 'minus'],
+            ['text' => 'bezpečnost spoléhá na =a=hashovací funkce[/]', 'sign' => 'none-accent'],
+        ],
+    ];
 
-    $eccText='ECC využívá matematiku =p=eliptických křivek[/] nad konečnými tělesy.
-        Dosahuje tak stejné bezpečnosti jako klasické asymetrické algortimy, ale s použitím =p=menších klíčů[/].';
+    $pqcText =
+        'Dnešní šifry stačí na běžné počítače, ale dostatečně výkonné =p=kvantové počítače[/] je díky Shorově a Groverově algoritmu prokazatelně prolomí. =p=Post-kvantová kryptografie[/] (PQC) proto vyvíjí nové standardy jako =p=ML-KEM (Kyber)[/], které staví na problémech (např. mřížky), jež jsou odolné i vůči kvantovému útoku.';
+
+    $eccText =
+        'ECC využívá matematiku =p=eliptických křivek[/] nad konečnými tělesy. Dosahuje =p=stejné bezpečnosti[/] jako starší RSA, ale s použitím nepoměrně =p=menších klíčů[/]. To radikálně zrychluje kryptografické operace a šetří paměť, což z ECC dělá ideální volbu pro smartphony, čipové karty nebo IoT zařízení.';
 
 @endphp
 
@@ -64,7 +82,8 @@
     <div class>
         <div class="poster__header">
             <div class="poster__title heading-mono--purple-glow">
-                Jak funguje kryp<span class="title-kern-1">t</span>ogra<span class="title-kern-2">f</span><span class="title-kern-1">i</span>e?
+                Jak funguje kryp<span class="title-kern-1">t</span>ogra<span class="title-kern-2">f</span><span
+                    class="title-kern-1">i</span>e?
             </div>
 
             <div class="poster__subtitle text-mono">
@@ -96,7 +115,7 @@
 
             <x-section-card title="Hashovací funkce" :text="$hashText">
                 <div class="hash-card__diagram">
-                     <x-diagrams.hash />
+                    <x-diagrams.hash />
                 </div>
             </x-section-card>
 
@@ -112,9 +131,7 @@
             </x-section-card>
 
             <x-section-card title="Zero-Knowledge Proofs (ZKP)" :text="$zkpText">
-                <div class="zkp-card__diagram">
-                     <x-diagrams.zkp />
-                </div>
+                <x-diagrams.snark-vs-stark />
             </x-section-card>
 
             {{-- column 3: key exchange & advanced apps --}}
@@ -132,7 +149,7 @@
 
             <x-section-card title="Blockchain a Kryptoměny" :text="$blockchainText">
                 <div class="blockchain-card__diagram">
-                     <x-diagrams.blockchain />
+                    <x-diagrams.blockchain />
                 </div>
             </x-section-card>
 
