@@ -20,6 +20,8 @@ body {
     color: $text;
 
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .poster__header {
@@ -45,10 +47,21 @@ body {
 }
 
 .poster__content {
-    column-count: 3;
-    column-gap: 0.6cm;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6cm;
     padding: 0.6cm;
-    display: block;
+    flex: 1;
+}
+
+.poster__column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6cm;
+}
+
+.poster__column > .section-card:last-child {
+    flex-grow: 1;
 }
 
 // https card
@@ -79,9 +92,9 @@ body {
 // pqc card
 
 .pqc-card__diagram {
-    transform: scale(0.9);
-    margin-top: 0.2cm;
-    margin-bottom: -0.2cm;
+    transform: scale(1);
+    margin-top: 0.6cm;
+    margin-bottom: 0.2cm;
 }
 
 // ecc card

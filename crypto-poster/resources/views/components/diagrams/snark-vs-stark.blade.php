@@ -46,7 +46,7 @@
             <line x1="70" y1="310" x2="50" y2="330" stroke="#e879f9" stroke-width="2.5" stroke-linecap="round"/>
 
             <text x="95" y="315" fill="#e879f9" font-family="'IBM Plex Mono', monospace" font-size="14" font-weight="600">Kvantová odolnost: NE</text>
-            <text x="95" y="335" fill="#f2d8f8" opacity="0.8" font-family="'IBM Plex Sans', sans-serif" font-size="12">Zranitelné Shorrovým algoritmem v budoucnu.</text>
+            <text x="95" y="335" fill="#f2d8f8" opacity="0.8" font-family="'IBM Plex Sans', sans-serif" font-size="12">Zranitelné Shorovým algoritmem v budoucnu.</text>
         </g>
 
         <g transform="translate(0, 0)">
@@ -90,7 +90,7 @@
             <path d="M 453 320 L 458 325 L 467 313" fill="none" stroke="#7dd3fc" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 
             <text x="495" y="315" fill="#7dd3fc" font-family="'IBM Plex Mono', monospace" font-size="14" font-weight="600">Kvantová odolnost: ANO</text>
-            <text x="495" y="335" fill="#f2d8f8" opacity="0.8" font-family="'IBM Plex Sans', sans-serif" font-size="12">Post-kvantově bezpečné (PQC standard).</text>
+            <text x="495" y="335" fill="#f2d8f8" opacity="0.8" font-family="'IBM Plex Sans', sans-serif" font-size="12">Post-kvantově bezpečné (odolné z principu).</text>
         </g>
     </svg>
 </div>

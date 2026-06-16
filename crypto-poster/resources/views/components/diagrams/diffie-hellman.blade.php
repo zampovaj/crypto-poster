@@ -141,9 +141,9 @@
          ========================================== -->
     <g transform="translate(0, -40)">
         <!-- Alice sends to Bob -->
-        <path d="M 220 330 C 400 330, 400 420, 780 420" fill="none" stroke="url(#mix-alice)" stroke-width="4" marker-end="url(#arrow-cyan)" stroke-linecap="round"/>
+        <path d="M 220 330 C 400 330, 400 420, 780 420" fill="none" stroke="url(#mix-alice)" stroke-width="3" marker-end="url(#arrow-cyan)" stroke-linecap="round"/>
         <!-- Bob sends to Alice -->
-        <path d="M 780 330 C 600 330, 600 420, 220 420" fill="none" stroke="url(#mix-bob)" stroke-width="4" marker-end="url(#arrow-purple)" stroke-linecap="round"/>
+        <path d="M 780 330 C 600 330, 600 420, 220 420" fill="none" stroke="url(#mix-bob)" stroke-width="3" marker-end="url(#arrow-purple)" stroke-linecap="round"/>
     </g>
     
     <!-- Warning Text -->

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 30 1000 380" fill="none"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 10 1000 400" fill="none"
     {{ $attributes->merge(['class' => 'w-full h-auto']) }}>
     <defs>
         <pattern id="dot-grid" width="20" height="20" patternUnits="userSpaceOnUse">

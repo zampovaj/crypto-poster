@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 10 1200 600" fill="none" {{ $attributes->merge(['class' => 'w-full h-auto']) }}>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 10 1200 570" fill="none" {{ $attributes->merge(['class' => 'w-full h-auto']) }}>
     <!-- DEFINITIONS -->
     <defs>
         <!-- Standard Purple Arrowhead -->
@@ -22,11 +22,11 @@
     <line x1="610" y1="150" x2="675" y2="150" stroke="#401f71" stroke-width="2" marker-end="url(#arrow-purple)"/>
     
     <!-- Snake Arrow (3 to 4) - Precise Cubic Bezier Curve -->
-    <path d="M 940 150 C 1030 150, 1030 315, 850 315 L 150 315 C 40 315, 40 480, 180 480" 
+    <path d="M 940 150 C 1030 150, 1030 295, 850 295 L 150 295 C 40 295, 40 420, 180 420" 
           fill="none" stroke="#401f71" stroke-width="2" marker-end="url(#arrow-purple)"/>
 
     <!-- Arrow 4 to 5 -->
-    <line x1="450" y1="480" x2="515" y2="480" stroke="#401f71" stroke-width="2" marker-end="url(#arrow-purple)"/>
+    <line x1="450" y1="450" x2="515" y2="450" stroke="#401f71" stroke-width="2" marker-end="url(#arrow-purple)"/>
 
 
     <!-- ============================================================
@@ -121,7 +121,7 @@
          ============================================================ -->
 
     <!-- STEP 4: KEY EXCHANGE -->
-    <g transform="translate(200, 380)">
+    <g transform="translate(200, 340)">
         <rect width="250" height="200" rx="12" fill="#0c0616" stroke="#401f71" stroke-width="3"/>
         
         <!-- Icon (Forging the Symmetric Key) -->
@@ -159,7 +159,7 @@
 
 
     <!-- STEP 5: SECURE TUNNEL -->
-    <g transform="translate(530, 380)">
+    <g transform="translate(530, 340)">
         <!-- Glowing Green Border for the final state -->
         <rect width="250" height="200" rx="12" fill="#0c0616" stroke="#2ef8a0" stroke-width="3"/>
         <rect width="240" height="190" x="5" y="5" rx="8" fill="rgba(46, 248, 160, 0.05)"/>

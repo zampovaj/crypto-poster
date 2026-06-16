@@ -92,8 +92,8 @@
         <text x="20" y="30" fill="#7dd3fc" font-family="'IBM Plex Sans', sans-serif" font-size="14" font-weight="600">Digest (256-bit)</text>
         
         <rect x="20" y="45" width="240" height="40" rx="4" fill="rgba(125, 211, 252, 0.1)" stroke="#7dd3fc" stroke-width="1"/>
-        <text x="140" y="62" fill="#7dd3fc" font-family="'IBM Plex Mono', monospace" font-size="13" text-anchor="middle">8c6976e5b5410415bde90</text>
-        <text x="140" y="78" fill="#7dd3fc" font-family="'IBM Plex Mono', monospace" font-size="13" text-anchor="middle">8bd4dee15dfb167a9c873</text>
+        <text x="140" y="62" fill="#7dd3fc" font-family="'IBM Plex Mono', monospace" font-size="12" text-anchor="middle">d07e7c4cce2afb5fdab874b1f6c1f95a</text>
+        <text x="140" y="78" fill="#7dd3fc" font-family="'IBM Plex Mono', monospace" font-size="12" text-anchor="middle">06564921bad3486805e5bd27fad62457</text>
     </g>
 
     <g transform="translate(690, 320)">
@@ -104,8 +104,8 @@
         <text x="150" y="30" fill="#f2d8f8" font-family="'IBM Plex Sans', sans-serif" font-size="14" font-weight="600" opacity="0.8">100% změna</text>
         
         <rect x="20" y="45" width="240" height="40" rx="4" fill="rgba(255, 77, 109, 0.1)" stroke="#ff4d6d" stroke-width="1"/>
-        <text x="140" y="62" fill="#ff4d6d" font-family="'IBM Plex Mono', monospace" font-size="13" text-anchor="middle">e1f8c1490234a5d8b92dc</text>
-        <text x="140" y="78" fill="#ff4d6d" font-family="'IBM Plex Mono', monospace" font-size="13" text-anchor="middle">18148a1d65dfc2d4b1fa3</text>
+        <text x="140" y="62" fill="#ff4d6d" font-family="'IBM Plex Mono', monospace" font-size="12" text-anchor="middle">af677b3e76e424d44932fcd4cec4bbac</text>
+        <text x="140" y="78" fill="#ff4d6d" font-family="'IBM Plex Mono', monospace" font-size="12" text-anchor="middle">d87c9029891797c0138139e457a8fbc7</text>
     </g>
 
 </svg>

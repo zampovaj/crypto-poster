@@ -20,7 +20,7 @@
         K tomu slouží =p=digitální podpisy[/] založené na asymetrické kryptografii.
         Odesílatel vytvoří otisk dat (=p=hash[/]) a podepíše ho svým =p=soukromým klíčem[/].
         Příjemce podpis ověří pomocí =p=veřejného klíče[/] a porovná ho s vlastním hashem.
-        Shoda znamená, že data nebyla změněna a skutečně pochází od odesílatele.';
+        Shoda znamená, že data nebyla změněna a skutečně pocházejí od odesílatele.';
     $httpsText = 'Stejný princip se používá i při =a=HTTPS[/]:
         server se prokazuje =a=podepsaným certifikátem[/] a klient si ověřuje jeho pravost,
         než naváže důvěrné spojení.';
@@ -34,24 +34,23 @@
         'Zvolí se dvě tajná velká =glue=prvočísla \(p\) a \(q\)[/]',
         'Spočítá se veřejný modul \(n = p \cdot q\)',
         'Určí se řád grupy \(\lambda(n) = \text{lcm}(p-1, q-1)\)',
-        'Zvolí se veřejný exponent \(e\) a vypočítá soukromý =glue=klíč \(d\):\(d \equiv e^{-1} \pmod{\lambda(n)}\)[/]',
+        'Zvolí se veřejný exponent \(e\) a vypočítá soukromý =glue=exponent \(d\):\(d \equiv e^{-1} \pmod{\lambda(n)}\)[/]',
         'Šifrování: Zpráva \(M\) se šifruje veřejným =glue=klíčem \((n, e)\): \(C = M^e \pmod n\)[/]',
-        'Dešifrování: Šifra \(C\) se dešifruje soukromým klíčem \(d\): \(M = C^d \pmod n\)',
+        'Dešifrování: Šifra \(C\) se dešifruje soukromým klíčem \((n, d)\): \(M = C^d \pmod n\)',
     ];
 
-    $dhkeText =
-        'Díky =p=asymetrické kryptografii[/] jsou dvě strany schopny vytvořit =p=sdílené tajemství[/], aniž by si ho kdy poslaly. Nejvyužívanější metodou je<br>=p=Diffie-Hellmanův algoritmus[/] využívaný k&nbsp;vytvoření =p=symetrického šifrovacího klíče[/]. Po síti putují pouze veřejná data, z nichž je pro útočníka odposlouchávajícího komunikaci matematicky nemožné klíč vypočítat.';
+    $dhkeText = 'Díky =p=asymetrické kryptografii[/] jsou dvě strany schopny vytvořit =p=sdílené tajemství[/], aniž by si ho kdy poslaly. Nejrozšířenější metodou pro dohodu na tomto symetrickém klíči je =p=Diffie-Hellmanův algoritmus[/]. Po síti putují pouze veřejná data, z nichž je pro =p=útočníka[/] odposlouchávajícího komunikaci matematicky =p=nemožné klíč vypočítat[/].';
 
-    $hashText = 'Hashovací funkce je matematický algoritmus, který převede libovolná data na unikátní řetězec fixní délky. Pro moderní kryptografii jsou klíčové tyto vlastnosti:
-        =glue=• =p=Jednosměrnost[/]: Z hashe nelze získat původní data.[/]
-        =glue=• =p=Kolizní odolnost[/]: Je nemožné najít dva různé vstupy se stejným hashem.[/]
-        =glue=• =p=Lavinový efekt[/]: I změna jednoho bitu na vstupu kompletně změní celý výstup.[/]';
+    $hashText = 'Hashovací funkce je matematický algoritmus, který převede libovolná data na pseudonáhodný otisk fixní délky. Pro moderní kryptografii jsou klíčové tyto vlastnosti:
+        =p=Jednosměrnost[/]: Z hashe nelze získat původní data.
+        =p=Kolizní odolnost[/]: Je téměř nemožné najít dva různé vstupy se stejným hashem.
+        =p=Lavinový efekt[/]: I změna jednoho bitu na vstupu kompletně změní celý výstup.';
 
     $blockchainText =
         '=p=Blockchain[/] je decentralizovaná databáze, jejíž historii =p=nelze zpětně zfalšovat[/]. Každý blok v řetězci obsahuje transakční data a =p=hash předchozího bloku[/]. Pokud by útočník změnil data v jediném bloku, změní se i jeho hash, což okamžitě =p=zneplatní všechny následující bloky[/]. Tato technologie tvoří absolutní základ kryptoměn jako =p=Bitcoin[/] nebo =p=Ethereum[/] a k dosažení bezpečné shody bez centrální autority využívá algoritmy typu =p=Proof of Work[/].';
 
     $zkpText =
-        'Matematický koncept =p=Zero-Knowledge Proofs[/] (ZKP - Důkazy s nulovou znalostí) umožňuje prokazateli přesvědčit ověřovatele o pravdivosti tvrzení bez odhalení jakékoli dodatečné informace – např. znalosti hesla, =p=aniž byste mu ho prozradili[/]. Původně interaktivní protokoly byly nahrazeny neinteraktivními (NIZK) verzemi, kdy prokazatel generuje a odesílá jeden matematický důkaz. Technologie je dnes naprosto klíčová pro =p=absolutní soukromí[/] a pro =p=škálování blockchainových sítí[/] (tzv. ZK-Rollups) komprimací tisíců transakcí do jediného důkazu. V praxi se používají dvě hlavní kategorie:';
+        'Matematický koncept =p=Zero-Knowledge Proofs[/] (ZKP - Důkazy s nulovou znalostí) umožňuje prokazateli přesvědčit ověřovatele o pravdivosti tvrzení bez odhalení jakékoli dodatečné informace (např. prokáže znalosti hesla, =p=aniž by ho prozradil[/]). Původně interaktivní protokoly byly nahrazeny neinteraktivními (NIZK) verzemi, kdy prokazatel generuje a odesílá jeden matematický důkaz. Technologie je dnes naprosto klíčová pro =p=absolutní soukromí[/] a pro =p=škálování blockchainových sítí[/] (tzv. ZK-Rollups) komprimací tisíců transakcí do jediného důkazu. V praxi se používají dvě hlavní kategorie:';
 
     $zkpCols = [
         [
@@ -94,70 +93,73 @@
         <div class="poster__content">
 
             {{-- column 1: basics & foundational algorithms --}}
+            <div class="poster__column">
+                <x-section-card title="Symetrická vs asymetrická" :text="$asymVsSymText">
+                    <x-diagrams.sym-vs-asym />
+                    <x-list-columns :columnsText="$asymVsSymCols" />
+                </x-section-card>
 
-            <x-section-card title="Symetrická vs asymetrická" :text="$asymVsSymText">
-                <x-diagrams.sym-vs-asym />
-                <x-list-columns :columnsText="$asymVsSymCols" />
-            </x-section-card>
+                <x-section-card title="RSA" :text="$rsaText">
+                    <x-list-steps :rows="$rsaSteps" />
+                </x-section-card>
 
-            <x-section-card title="RSA" :text="$rsaText">
-                <x-list-steps :rows="$rsaSteps" />
-            </x-section-card>
-
-            <x-section-card title="Digitální podpisy a HTTPS" :text="$signaturesText">
-                <div class="text-mono https-card__intro">
-                    <x-text-transformer :text="$httpsText" />
-                </div>
-                <x-diagrams.https />
-            </x-section-card>
+                <x-section-card title="Digitální podpisy a HTTPS" :text="$signaturesText">
+                    <div class="text-mono https-card__intro">
+                        <x-text-transformer :text="$httpsText" />
+                    </div>
+                    <x-diagrams.https />
+                </x-section-card>
+            </div>
 
             {{-- column 2: integrity & communication --}}
-
-            <x-section-card title="Hashovací funkce" :text="$hashText">
-                <div class="hash-card__diagram">
-                    <x-diagrams.hash />
-                </div>
-            </x-section-card>
-
-            <x-section-card title="Eliptické křivky" text="">
-                <div class="ecc-card__content">
-                    <div class="ecc-card__diagram">
-                        <x-diagrams.curve-geometry />
+            <div class="poster__column">
+                <x-section-card title="Hashovací funkce" :text="$hashText">
+                    <div class="hash-card__diagram">
+                        <x-diagrams.hash />
                     </div>
-                    <div class="ecc-card__text text-mono">
-                        <x-text-transformer :text="$eccText" />
-                    </div>
-                </div>
-            </x-section-card>
+                </x-section-card>
 
-            <x-section-card title="Zero-Knowledge Proofs (ZKP)" :text="$zkpText">
-                <x-diagrams.snark-vs-stark />
-            </x-section-card>
+                <x-section-card title="Eliptické křivky" text="">
+                    <div class="ecc-card__content">
+                        <div class="ecc-card__diagram">
+                            <x-diagrams.curve-geometry />
+                        </div>
+                        <div class="ecc-card__text text-mono">
+                            <x-text-transformer :text="$eccText" />
+                        </div>
+                    </div>
+                </x-section-card>
+
+                <x-section-card title="Zero-Knowledge Proofs (ZKP)" :text="$zkpText">
+                    <x-diagrams.snark-vs-stark />
+                </x-section-card>
+            </div>
 
             {{-- column 3: key exchange & advanced apps --}}
-
-            <x-section-card title="Diffie-Hellmanova výměna klíče" text="">
-                <div class="dhke-card__content">
-                    <div class="dhke-card__diagram">
-                        <x-diagrams.diffie-hellman />
+            <div class="poster__column">
+                <x-section-card title="Diffie-Hellmanova výměna klíče" text="">
+                    <div class="dhke-card__content">
+                        <div class="dhke-card__diagram">
+                            <x-diagrams.diffie-hellman />
+                        </div>
+                        <div class="dhke-card__text text-mono">
+                            <x-text-transformer :text="$dhkeText" />
+                        </div>
                     </div>
-                    <div class="dhke-card__text text-mono">
-                        <x-text-transformer :text="$dhkeText" />
+                </x-section-card>
+
+                <x-section-card title="Blockchain a Kryptoměny" :text="$blockchainText">
+                    <div class="blockchain-card__diagram">
+                        <x-diagrams.blockchain />
                     </div>
-                </div>
-            </x-section-card>
+                </x-section-card>
 
-            <x-section-card title="Blockchain a Kryptoměny" :text="$blockchainText">
-                <div class="blockchain-card__diagram">
-                    <x-diagrams.blockchain />
-                </div>
-            </x-section-card>
-
-            <x-section-card title="Post-kvantová éra (PQC)" :text="$pqcText">
-                <div class="pqc-card__diagram">
-                    <x-diagrams.quantum />
-                </div>
-            </x-section-card>
+                <x-section-card title="Post-kvantová éra (PQC)" :text="$pqcText">
+                    <div class="pqc-card__diagram">
+                        <x-diagrams.quantum />
+                    </div>
+                </x-section-card>
+            </div>
 
         </div>
     </div>
