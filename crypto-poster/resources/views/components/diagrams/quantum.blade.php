@@ -1,20 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 0 675 380" fill="none" {{ $attributes->merge(['class' => 'w-full h-auto']) }}>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 30 675 310" fill="none" {{ $attributes->merge(['class' => 'w-full h-auto']) }}>
     <!-- DEFINITIONS -->
     <defs>
-        <!-- Background Grid Pattern for texture -->
-        <pattern id="dot-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-            <circle cx="10" cy="10" r="1" fill="#401f71" opacity="0.3" />
-        </pattern>
-        
         <!-- Down Arrow -->
         <g id="arrow-down">
             <line x1="0" y1="0" x2="0" y2="15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <polyline points="-4,10 0,15 4,10" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
         </g>
     </defs>
-
-    <!-- Global Background Grid -->
-    <rect width="100%" height="100%" fill="url(#dot-grid)"/>
 
     <!-- ============================================================
          LEFT PANEL: SHOR'S ALGORITHM (Purple Theme)

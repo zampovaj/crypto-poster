@@ -1,6 +1,6 @@
-@props(['title', 'text', 'size' => 'col-6'])
+@props(['title', 'text'])
 
-<div class="section-card {{ $size }}">
+<div class="section-card">
     <div class="section-card__title heading-sans--purple-glow">
         {{ $title }}
     </div>

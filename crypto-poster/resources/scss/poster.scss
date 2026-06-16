@@ -14,7 +14,7 @@ body {
     width: 70cm;
     height: 50cm;
 
-    padding: 0.8cm;
+    padding: 0.6cm;
 
     background: $bg;
     color: $text;
@@ -28,28 +28,27 @@ body {
     align-items: center;
 
     padding: 0;
-    padding-top: 1cm;
+    padding-top: 0.8cm;
     padding-bottom: 0.2cm;
 }
 
 .poster__title {
     display: flex;
-    margin-bottom: 0.2cm;
+    margin-bottom: 0.1cm;
 }
 
 .poster__subtitle {
     display: flex;
-    font-size: 0.8cm !important;
+    font-size: 0.5cm !important;
     color: $light-purple !important;
     opacity: 0.8;
 }
 
 .poster__content {
-    display: grid;
-    grid-template-columns: repeat(24, 1fr);
-    grid-auto-rows: auto;
-    gap: 1cm;
-    padding: 1cm;
+    column-count: 3;
+    column-gap: 0.6cm;
+    padding: 0.6cm;
+    display: block;
 }
 
 // https card
@@ -80,13 +79,51 @@ body {
 // pqc card
 
 .pqc-card__diagram {
-    padding-top: 0.4cm;
-    transform: scale(1.1);
+    transform: scale(0.9);
+    margin-top: 0.2cm;
+    margin-bottom: -0.2cm;
 }
 
 // ecc card
 
-.ecc-card__geometry-diagram {
+.ecc-card__content {
+    display: flex;
+    gap: 16px;
+}
+
+.ecc-card__diagram {
+    display: flex;
+    flex: 5;
     max-width: 650px;
     margin: auto;
+}
+
+.ecc-card__text {
+    display: flex;
+    flex: 1;
+    padding-top: 0.4cm;
+}
+
+// hash, blockchain, zkp cards
+
+.hash-card__diagram {
+    margin-top: 0.4cm;
+}
+
+.blockchain-card__diagram {
+    margin-top: 0.4cm;
+}
+
+.zkp-card__diagram {
+    margin-top: 0.5cm;
+}
+
+// poster title kerning
+
+.title-kern-1 {
+    margin-left: -0.2cm;
+}
+
+.title-kern-2 {
+    margin-left: 0.1cm;
 }

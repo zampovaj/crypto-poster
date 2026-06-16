@@ -16,17 +16,17 @@
          ============================================================ -->
     
     <!-- Arrow 1 to 2 -->
-    <line x1="280" y1="150" x2="345" y2="150" stroke="#401f71" stroke-width="4" marker-end="url(#arrow-purple)"/>
+    <line x1="280" y1="150" x2="345" y2="150" stroke="#401f71" stroke-width="2" marker-end="url(#arrow-purple)"/>
     
     <!-- Arrow 2 to 3 -->
-    <line x1="610" y1="150" x2="675" y2="150" stroke="#401f71" stroke-width="4" marker-end="url(#arrow-purple)"/>
+    <line x1="610" y1="150" x2="675" y2="150" stroke="#401f71" stroke-width="2" marker-end="url(#arrow-purple)"/>
     
     <!-- Snake Arrow (3 to 4) - Precise Cubic Bezier Curve -->
     <path d="M 940 150 C 1030 150, 1030 315, 850 315 L 150 315 C 40 315, 40 480, 180 480" 
-          fill="none" stroke="#401f71" stroke-width="4" marker-end="url(#arrow-purple)"/>
+          fill="none" stroke="#401f71" stroke-width="2" marker-end="url(#arrow-purple)"/>
 
     <!-- Arrow 4 to 5 -->
-    <line x1="450" y1="480" x2="515" y2="480" stroke="#401f71" stroke-width="4" marker-end="url(#arrow-purple)"/>
+    <line x1="450" y1="480" x2="515" y2="480" stroke="#401f71" stroke-width="2" marker-end="url(#arrow-purple)"/>
 
 
     <!-- ============================================================
